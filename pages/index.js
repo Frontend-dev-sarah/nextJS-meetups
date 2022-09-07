@@ -58,7 +58,8 @@ export const getStaticProps = async () => {
         id: meetup._id.toString(),
       })),
     },
-    revalidate: 3600, //update the page every one hour, to ensure having new data
+    //revalidate: 3600, //update the page every one hour, to ensure having new data
+    revalidate: 1, //update the page every one second, to ensure having new data
   };
 };
 

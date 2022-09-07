@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
   client.close();
 
   return {
-    fallback: false, // it means that we have provided all supported paths
+    fallback: false, // it means that we have provided all supported paths, true/"blocking"=>might not be more pages, no 404, generated that page after
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
